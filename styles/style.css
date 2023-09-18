@@ -103,6 +103,7 @@ body {
     grid-area: main;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -129,6 +130,80 @@ body {
     font-size: 5rem;
     font-weight: bold;
     margin: 30px 0 50px 0;
+}
+
+.main-contact-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-form {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #ccc; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-right: 20px;
+    flex: 1;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000; 
+    border-radius: 5px;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: lightgreen; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+}
+
+.contact-form input[type="submit"] {
+    background-color: lightgreen; 
+    border: none; 
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    color: #fff; 
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: green;
+}
+
+.contact-image {
+    flex: 1;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Proyectos.html */
@@ -163,6 +238,40 @@ body {
     justify-content: center;
     gap: 100px;
 }
+
+/* Quienes-somos.html */
+
+.main-quienes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 4rem;
+}
+
+
+.main-quienes-parrafo{
+    flex: 1;
+    text-align: justify;
+}
+
+.main-quienes-parrafo p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+.main-quienes-image {
+    flex: 1;
+    text-align: center;
+}
+
+.main-quienes-image img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* MediaQuerys */
 
@@ -221,6 +330,21 @@ body {
         justify-content: center;
         gap: 20px;
     }
+
+    .main-quienes {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main-quienes-parrafo {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .main-quienes-image img {
+        max-width: 70%;
+        margin-bottom: 20px;
+    }
 }
 
 /* Media query S */
@@ -262,12 +386,29 @@ body {
         gap: 20px;
     }
 
+    .main-quienes {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main-quienes-parrafo {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .main-quienes-image img {
+        max-width: 70%;
+        margin-bottom: 20px;
+    }
+
     .footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
 }
+
 
 /* Media query XS */
 @media (max-width: 576px) {
@@ -294,5 +435,20 @@ body {
         align-items: center;
         justify-content: center;
         gap: 20px;
+    }
+
+    .main-quienes {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main-quienes-parrafo {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .main-quienes-image img {
+        max-width: 70%;
+        margin-bottom: 20px;
     }
 }
