@@ -1,0 +1,421 @@
+// Fuente //
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,800;1,100;1,300;1,400;1,700;1,800&display=swap');
+
+// Variables //
+$color-white: #fff;
+$color-black: #000;
+$font-family: 'Montserrat', sans-serif;
+
+//Mixins//
+
+@mixin main-title-h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        margin: 20px 0 50px 0;
+    
+}
+
+@mixin main-title-h3 {
+        font-size: 1.3rem;
+        font-weight: 100;
+        font-style: italic;
+}
+
+body {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    font-family: $font-family;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    height: 100px;
+
+    .header {
+        display: flex;
+    }
+}
+
+.main {
+    grid-area: main;
+
+    .main-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 0;
+        margin-bottom: 40px;
+
+    .main-title {
+        h3 {
+            @include main-title-h3;
+    }
+
+        h1 {
+            @include main-title-h1;
+        }
+
+        .main-title-link {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: $color-black;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+    }
+
+    .main-sidetext {
+        width: 80%;
+        text-align: center;
+        margin-top: 20px;
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .photogallery {
+        display: flex;
+        justify-content: center;
+        margin: 35px 0px 35px 0px;
+        #carouselExampleAutoplaying {
+            width: 95%;
+        .carousel-item img {
+            width: 1280px;
+            height: 720px;
+        }
+        }
+    }
+}
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+/*contact.html*/
+
+.main-contact {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0px 25px 0px;
+    padding: 40px 0px 100px 0px;
+
+    .main-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 0;
+        margin-bottom: 50px;
+    
+
+    .main-title-contact {
+        h3 {
+            @include main-title-h3()
+        }
+
+        h1 {
+            @include main-title-h1()
+        }
+    }
+}
+
+    .main-contact-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contact-image {
+        flex: 1;
+        margin-right: 20px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .contact-form {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-right: 20px;
+        flex: 1;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid $color-black;
+            border-radius: 5px;
+
+        &:focus {
+            outline: none;
+            border-color: lightgreen;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        }
+
+        input[type="submit"] {
+            background-color: lightgreen;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            cursor: pointer;
+
+        &:hover {
+            background-color: green;
+        }
+        }
+    }
+
+    .contact-image {
+        flex: 1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    }
+
+
+/*Proyectos.html*/
+
+.mosaico {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .imagen {
+        overflow: hidden;
+        border: 1px solid #ddd;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+    }
+    }
+}
+
+/*Servicios.html*/
+    .main {
+        .container-cards {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+    }
+}
+
+/* Quienes-somos.html */
+    .main-quienes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        gap: 4rem;
+
+    .main-quienes-parrafo {
+        flex: 1;
+        text-align: justify;
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .main-quienes-image {
+        flex: 1;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+                    "header header"
+                    "main main"
+                    "footer footer";
+        }
+
+    .main {
+        .main-hero {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            gap: 4rem;
+
+    .main-title {
+        margin-left: 0;
+        width: 100%;
+
+        h1 {
+            font-size: 60px;
+        }
+
+        .main-title-link {
+            font-size: 18px;
+        }
+                }
+
+        .main-sidetext {
+            width: 50%;
+        }
+    }
+
+    .photogallery {
+        flex-direction: column;
+        align-items: center;
+
+        #carouselExampleAutoplaying {
+            width: 100%;
+
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        }
+    }
+}
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                "header"
+                "main"
+                "footer";
+}
+
+    .main {
+        .main-hero {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            gap: 4rem;
+
+        .main-title {
+            h1 {
+                font-size: 40px;
+        }
+
+        .main-title-link {
+            font-size: 16px;
+        }
+        }
+
+        .main-sidetext {
+            p {
+                font-size: 18px;
+        }
+        }
+    }
+}
+
+    .photogallery {
+        flex-direction: column;
+        align-items: center;
+
+    #carouselExampleAutoplaying {
+        width: 100%;
+
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 576px) {
+    .main {
+        .main-hero {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            gap: 4rem;
+
+        .main-title {
+            h1 {
+                font-size: 32px;
+        }
+
+        .main-title-link {
+            font-size: 14px;
+        }
+        }
+    }
+
+    .photogallery {
+        flex-direction: column;
+        align-items: center;
+
+        #carouselExampleAutoplaying {
+            width: 100%;
+
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        }
+    }
+    }
+}
