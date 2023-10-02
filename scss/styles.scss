@@ -35,8 +35,7 @@ body {
 
 header {
     grid-area: header;
-    display: flex;
-    height: 100px;
+    display: block;
 
     .header {
         display: flex;
@@ -244,6 +243,7 @@ footer {
             justify-content: center;
             gap: 100px;
     }
+
 }
 
 /* Quienes-somos.html */

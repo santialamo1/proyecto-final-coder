@@ -9,8 +9,8 @@ body {
 
 header {
   grid-area: header;
-  display: flex;
-  height: 100px;
+  display: block;
+  
 }
 header .header {
   display: flex;
@@ -181,6 +181,13 @@ footer {
 .mosaico .imagen {
   overflow: hidden;
   border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mosaico .imagen:hover{
+  transform: scale(1.1);
 }
 .mosaico .imagen img {
   width: 100%;
@@ -197,6 +204,7 @@ footer {
   justify-content: center;
   gap: 100px;
 }
+
 
 /* Quienes-somos.html */
 .main-quienes {
