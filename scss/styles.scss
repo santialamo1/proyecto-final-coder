@@ -71,6 +71,10 @@ header {
             color: #fff;
             text-decoration: none;
             border-radius: 20px;
+
+            &:hover{
+                transform: scale(1.2);
+            }
         }
     }
 
@@ -224,6 +228,13 @@ footer {
     .imagen {
         overflow: hidden;
         border: 1px solid #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         img {
             width: 100%;
@@ -243,6 +254,9 @@ footer {
             justify-content: center;
             gap: 100px;
     }
+        .card:hover{
+            transform: scale(1.1);
+        }
 
 }
 
@@ -277,145 +291,180 @@ footer {
 }
 
 /* Media Queries */
+/* Media query M */
 @media (max-width: 992px) {
     body {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-                    "header header"
-                    "main main"
-                    "footer footer";
-        }
+            "header header"
+            "main main"
+            "footer footer";
+    }
 
-    .main {
-        .main-hero {
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
-            gap: 4rem;
+    .main .main-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 4rem;
+    }
 
-    .main-title {
+    .main .main-hero .main-title {
         margin-left: 0;
         width: 100%;
-
-        h1 {
-            font-size: 60px;
-        }
-
-        .main-title-link {
-            font-size: 18px;
-        }
-                }
-
-        .main-sidetext {
-            width: 50%;
-        }
     }
 
-    .photogallery {
+    .main-title h1 {
+        font-size: 60px;
+    }
+
+    .main .main-hero .main-title .main-title-link {
+        font-size: 18px;
+    }
+
+    .main .main-hero .main-sidetext {
+        width: 50%;
+    }
+
+    .main .photogallery {
         flex-direction: column;
         align-items: center;
+    }
 
-        #carouselExampleAutoplaying {
-            width: 100%;
+    #carouselExampleAutoplaying {
+        width: 100%;
+    }
 
-        .carousel-item img {
-            max-width: 100%;
-            height: auto;
-        }
-        }
+    .carousel-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .main .container-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .main-quienes {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main-quienes-parrafo {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .main-quienes-image img {
+        max-width: 70%;
+        margin-bottom: 20px;
     }
 }
-}
 
+/* Media query S */
 @media (max-width: 768px) {
     body {
         grid-template-columns: 1fr;
         grid-template-areas:
-                "header"
-                "main"
-                "footer";
-}
-
-    .main {
-        .main-hero {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            gap: 4rem;
-
-        .main-title {
-            h1 {
-                font-size: 40px;
-        }
-
-        .main-title-link {
-            font-size: 16px;
-        }
-        }
-
-        .main-sidetext {
-            p {
-                font-size: 18px;
-        }
-        }
+            "header"
+            "main"
+            "footer";
     }
-}
 
-    .photogallery {
+    .main .main-hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 4rem;
+    }
+
+    .main-title h1 {
+        font-size: 40px;
+    }
+
+    .main .main-hero .main-title .main-title-link {
+        font-size: 16px;
+    }
+
+    .main-sidetext p {
+        font-size: 18px;
+    }
+
+    .main .container-cards {
+        display: flex;
         flex-direction: column;
         align-items: center;
-
-    #carouselExampleAutoplaying {
-        width: 100%;
-
-        .carousel-item img {
-            max-width: 100%;
-            height: auto;
-        }
+        justify-content: center;
+        gap: 20px;
     }
-}
+
+    .main-quienes {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main-quienes-parrafo {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .main-quienes-image img {
+        max-width: 70%;
+        margin-bottom: 20px;
+    }
 
     .footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
 }
+
+
+/* Media query XS */
 @media (max-width: 576px) {
-    .main {
-        .main-hero {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            gap: 4rem;
-
-        .main-title {
-            h1 {
-                font-size: 32px;
-        }
-
-        .main-title-link {
-            font-size: 14px;
-        }
-        }
+    .main .main-hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 4rem;
     }
 
-    .photogallery {
+    .main-title h1 {
+        font-size: 32px;
+    }
+
+    .main .main-hero .main-title .main-title-link {
+        font-size: 14px;
+    }
+
+    .main .container-cards {
+        display: flex;
         flex-direction: column;
         align-items: center;
-
-        #carouselExampleAutoplaying {
-            width: 100%;
-
-        .carousel-item img {
-            max-width: 100%;
-            height: auto;
-        }
-        }
+        justify-content: center;
+        gap: 20px;
     }
+
+    .main-quienes {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main-quienes-parrafo {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .main-quienes-image img {
+        max-width: 70%;
+        margin-bottom: 20px;
     }
 }
